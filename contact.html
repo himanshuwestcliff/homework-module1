@@ -25,7 +25,57 @@
                 </div>
             </header>
             <main>
-                
+                <h1>Contacting Us</h1>
+                <p>If you need more information about the Cliffs, Hours of Operations, Facilities or questions about this site, please contact us bu using one of the following:</p>
+                <h2>Phone:</h2>
+                <p>(800)GCLIFFS</p>
+                <h2>Email:</h2>
+                <p>info@greatcliffs.com</p>
+                <form action="/contact" method="post">
+                    <fieldset>
+                        <legend>Contact Form</legend>
+                        
+                        <label>Enter your full name:</label>
+                        <input type="text" name="name"><br>
+            
+                        <label>Enter your email:</label>
+                        <input type="email" name="email"><br>
+            
+                        <label>Enter your phone:</label>
+                        <input type="tel" name="phone"><br>
+            
+                        <label>Select your gender:</label>
+                        <input type="radio" name="gender" value="male">Male
+                        <input type="radio" name="gender" value="female">Female<br>
+            
+                        <label>How should we contact you</label>
+                        <select>
+                            <option value="email">Email</option>
+                            <option value="phone">Phone</option>
+                        </select>
+
+                        <br>
+
+                        <label>Which cliff are you inquiring about?</label>
+                        <select>
+                            <option value="West Cliff">West Cliff</option>
+                            <option value="North Cliff">North Cliff</option>
+                            <option value="East Cliff">East Cliff</option>
+                            <option value="South Cliff">South Cliff</option>
+                        </select>
+            
+                        <br>
+            
+                        <label>How did you hear about us?</label><br>
+                        <textarea rows="5" cols="30"></textarea>
+            
+                        <br><br>
+            
+                        <input type="submit" value="Inquire">
+
+            
+                    </fieldset>
+                </form>
             </main>
             <section>
                 <ul id="partners">
