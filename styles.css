@@ -203,3 +203,96 @@ td:first-child {
     font-weight: bold;
     background: #bde1ff;
 }
+
+.contactinfo {
+    margin-bottom: 20px;
+}
+
+.contactinfo .phone span:first-child,
+.contactinfo .email span:first-child {
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form fieldset {
+    border: 2px solid #4977D1;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+form legend {
+    font-weight: bold;
+    color: #4977D1;
+}
+
+form .textbox label,
+form .radios label,
+form .selectmenu label,
+form .commentbox label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form .textbox input[type="text"],
+form .textbox input[type="email"],
+form .commentbox textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form .radios input[type="radio"] {
+    margin-right: 5px;
+}
+
+form .selectmenu select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form .button input[type="submit"] {
+    background-color: #4977D1;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form .button input[type="submit"]:hover {
+    background-color: #9ed034;
+}
+
+/* Partners Section */
+#partners {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.partner img {
+    width: 100px;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    background-color: #4977D1;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social h3 {
+    display: inline-block;
+    margin: 0 10px;
+}
