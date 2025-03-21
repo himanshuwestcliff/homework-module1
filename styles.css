@@ -43,7 +43,7 @@ header {
 
 .main-menu ul li {
     list-style-type: none;
-    display: inline-block;
+    display: block;
     float: left;
     padding-left: 25px;
     padding-right: 25px;
