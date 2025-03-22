@@ -306,15 +306,13 @@ footer .social h3 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
   color: #3a3a3a;
-  background: linear-gradient(
+  background: none(
     0deg,
     rgba(251, 215, 139, 1) 0%,
     rgba(118, 213, 245, 1) 100%
   );
-  padding: 10px;
   border-radius: 5px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #timeofday {
