@@ -56,7 +56,7 @@
       </main>
       <section>
         <ul id="partners">
-          <li class="partner">
+          <!--<li class="partner">
             <img
               src="images/partners/partner-bustour.png"
               alt="Partner Bus Tour"
@@ -91,7 +91,7 @@
               src="images/partners/partner-tourgroup.png"
               alt="Partner Tour Group"
             />
-          </li>
+          </li> -->
         </ul>
       </section>
       <footer>
@@ -115,45 +115,72 @@
 
     <!-- Javascript Codes -->
     <script>
-      //Create a time data function
+      // Create a time data function
       function currentTime() {
-        //Declare Variables
-        var d = new Date(); //Get Current Date
-        var hr = d.getHours(); //Get Current Hours
-        var min = d.getMinutes(); //Get Current Minutes
-        var sec = d.getSeconds(); //Get Current Seconds
-        var ampm; //Declare empty variable to store am or pm
+        var d = new Date();
+        var hr = d.getHours();
+        var min = d.getMinutes();
+        var sec = d.getSeconds();
+        var ampm;
 
-        //Add 0 to single digits for seconds
+        var utchr = d.getUTCHours();
+        var timeDiff = utchr - hr;
+
+        if (timeDiff < 0) {
+          timeDiff += 24; // Adding 24 hours to normalize the difference
+        }
+
+        if (timeDiff < 0) {
+          adjTimeDiff = -timeDiff;
+        } else {
+          adjTimeDiff = timeDiff;
+        }
+        //var adjTimeDiff;
+        var timeZone; // PM,MT,CT,ET
+        switch (adjTimeDiff) {
+          case 8:
+            timeZone = "PT"; // Pacific Time (UTC - 8)
+            break;
+          case 7:
+            timeZone = "MT"; // Mountain Time (UTC - 7)
+            break;
+          case 6:
+            timeZone = "CT"; // Central Time (UTC - 6)
+            break;
+          case 5:
+            timeZone = "ET"; // Eastern Time (UTC - 5)
+            break;
+          default:
+            timeZone = "Unknown Zone"; // Catch-all for other cases
+        }
+
+        // Add 0 single digits for seconds
         if (sec < 10) {
           sec = "0" + sec;
         }
-        //Add 0 to single digits for minutes
+        // Add 0 single digits for minutes
         if (min < 10) {
           min = "0" + min;
         }
 
-        //Determine AM or PM string
+        // Determine AM or PM string
         if (hr == 12) {
-          ampm = "PM"; //Set to PM
+          ampm = "PM";
         } else if (hr > 12) {
-          hr -= 12; //Deduct 12 from hours greater than 12 (military time)
-          ampm = "PM"; //Set to PM
+          hr -= 12;
+          ampm = "PM";
         } else {
-          ampm = "AM"; //Set to AM
+          ampm = "AM";
         }
-
-        //Assemble time format to display
-        var time = hr + ":" + min + ":" + sec + " " + ampm;
+        // Assemble time format to display
+        var time = hr + ":" + min + ":" + sec + " " + ampm + " " + timeZone;
 
         //Display current local time and time zone on HTML elements
-        document.getElementById("clock").innerText = time; //adding Time
+        document.getElementById("clock").innerHTML = time;
 
-        //Run time data function every 1 second
-        setInterval(currentTime, 1000); //setting Timer
+        setInterval(currentTime, 1000);
       }
 
-      //Initial run of the time data function
       currentTime();
     </script>
   </body>
