@@ -77,20 +77,20 @@ h2 {
   color: #9ed034;
 }
 
-/* Partners */
+/* partner-list */
 section {
   width: 100%;
   background-color: #4288c3;
 }
 
-section #partners {
+section #partner-list {
   width: 1200px;
   padding: 2em 0 2em 0;
   margin: 0 auto;
   text-align: center;
 }
 
-section #partners .partner {
+section #partner-list .partner {
   display: inline-block;
   margin: 0 0.75em;
   padding: 1.3em 1.5em;
@@ -98,7 +98,7 @@ section #partners .partner {
   border-radius: 50%;
 }
 
-section #partners .partner img {
+section #partner-list .partner img {
   width: 90px;
   height: 90px;
 }
@@ -272,8 +272,8 @@ form .button input[type="submit"]:hover {
   background-color: #9ed034;
 }
 
-/* Partners Section */
-#partners {
+/* partner-list Section */
+#partner-list {
   list-style-type: none;
   padding: 0;
   display: flex;
