@@ -4,22 +4,22 @@ header {
   min-height: 400px;
   padding-top: 3em;
 }
-
 #home header {
-  background: no-repeat lightgrey url(images/cliff_ocean.jpg);
+  background: no-repeat lightgray url(images/cliff_ocean.jpg);
   background-size: 1500px;
 }
-
 #activities header {
-  background: no-repeat lightgrey url(images/runfly.jpg);
+  background: no-repeat lightgray url(images/runfly.jpg);
   background-size: 1500px;
 }
-
 #contact header {
-  background: no-repeat lightgrey url(images/cliff_rock.jpg);
+  background: no-repeat lightgray url(images/cliff_rock.jpg);
   background-size: 1500px;
 }
-
+#cliff header {
+  background: no-repeat lightgray url(images/forest_cliff.jpg);
+  background-size: 1500px;
+}
 .main-header {
   background-color: rgb(255, 255, 255, 0.8);
   width: 700px;
@@ -27,23 +27,20 @@ header {
   min-height: 100px;
   height: 100px;
 }
-
 .main-header .logo img {
   width: 100px;
   height: 100px;
   margin: 0 2em 0 0;
   float: left;
 }
-
 /* Navigation */
 .main-menu {
-  margin-left: 224px;
+  margin-left: 227px;
   font-weight: 400;
 }
-
 .main-menu ul li {
   list-style-type: none;
-  display: block;
+  display: inline-block;
   float: left;
   padding-left: 25px;
   padding-right: 25px;
@@ -52,44 +49,42 @@ header {
   text-transform: uppercase;
   font-size: 14px;
 }
-
 .main-menu ul li a {
   text-decoration: none;
   color: #888;
 }
-
 .main-menu ul li a:hover {
   color: #9ed034;
 }
-
 .main-menu ul li.active {
   background: #9ed034;
   border: none;
 }
-
 .main-menu ul li.active a {
   color: #fff;
 }
 
 /* Main */
-h2 {
+main {
+  padding: 50px;
+}
+main h2 {
   font-family: Arial, Helvetica, sans-serif;
   color: #9ed034;
+  margin-bottom: 50px;
 }
 
-/* partner-list */
+/* Partners */
 section {
   width: 100%;
   background-color: #4288c3;
 }
-
 section #partner-list {
   width: 1200px;
   padding: 2em 0 2em 0;
   margin: 0 auto;
   text-align: center;
 }
-
 section #partner-list .partner {
   display: inline-block;
   margin: 0 0.75em;
@@ -97,7 +92,6 @@ section #partner-list .partner {
   background-color: #fff;
   border-radius: 50%;
 }
-
 section #partner-list .partner img {
   width: 90px;
   height: 90px;
@@ -110,28 +104,23 @@ footer {
   padding-bottom: 1em;
   background-color: #ecfab8;
 }
-
 footer #nondisclaimer .copy {
   padding: 3.5em 3.5em 3.5em 13em;
   float: left;
   font-size: 0.9em;
 }
-
 footer #nondisclaimer .social {
   padding: 2.5em;
   margin-right: 9.25em;
   float: right;
 }
-
 footer #disclaimer {
   clear: both;
 }
-
 footer #disclaimer p {
   font-size: 0.85em;
   text-align: center;
 }
-
 footer #nondisclaimer .social .fa {
   padding: 15px;
   font-size: 15px;
@@ -141,21 +130,17 @@ footer #nondisclaimer .social .fa {
   margin: 0 4px;
   border-radius: 50%;
 }
-
 footer #nondisclaimer .social .fa:hover {
   opacity: 0.7;
 }
-
 footer #nondisclaimer .social .fa-facebook {
   background: #3b5998;
   color: white;
 }
-
 footer #nondisclaimer .social .fa-twitter {
   background: #55acee;
   color: white;
 }
-
 footer #nondisclaimer .social .fa-instagram {
   background: #125688;
   color: white;
@@ -166,7 +151,6 @@ table {
   width: 1000px;
   margin: 4em auto 0 auto;
 }
-
 caption {
   background: #852b1b;
   height: 40px;
@@ -175,16 +159,13 @@ caption {
   font-weight: bold;
   padding-top: 1em;
 }
-
 thead {
-  background: #bde1ff;
+  background-color: #bde1ff;
 }
-
 tbody {
-  background: #eeffe6;
+  background-color: #eeffe6;
   text-align: center;
 }
-
 th,
 td {
   width: 225px;
@@ -192,200 +173,133 @@ td {
   vertical-align: middle;
   border: solid 1px #852b1b;
 }
-
 th:first-child {
   width: 125px;
-  height: 50px;
+  height: 50ox;
   background: #4977d1;
   color: #fff;
 }
-
 td:first-child {
   font-weight: bold;
   background: #bde1ff;
 }
 
-.contactinfo {
-  margin-bottom: 20px;
+/* Contact */
+h1 {
+  color: #9ed034;
 }
-
-.contactinfo .phone span:first-child,
-.contactinfo .email span:first-child {
-  font-weight: bold;
-}
-
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  margin-top: 1em;
 }
-
-form fieldset {
-  border: 2px solid #4977d1;
-  padding: 15px;
-  border-radius: 5px;
+fieldset {
+  border-color: #9ed034;
 }
-
-form legend {
-  font-weight: bold;
+fieldset legend {
+  text-transform: uppercase;
   color: #4977d1;
 }
-
-form .textbox label,
-form .radios label,
-form .selectmenu label,
-form .commentbox label {
+label {
   display: block;
-  margin-bottom: 5px;
+  margin: 15px 0 0 0;
 }
-
-form .textbox input[type="text"],
-form .textbox input[type="email"],
-form .commentbox textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+input {
+  width: 400px;
 }
-
-form .radios input[type="radio"] {
-  margin-right: 5px;
+input[type="radio"] {
+  width: 25px;
 }
-
-form .selectmenu select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+textarea {
+  width: 400px;
+  height: 100px;
 }
-
-form .button input[type="submit"] {
-  background-color: #4977d1;
+input[type="submit"] {
+  display: block;
+  margin: 20px 0 10px 0;
+  width: 150px;
+  height: 40px;
+  /* background: #4977d1; */
   color: #fff;
-  padding: 10px;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  margin-left: 250px;
 }
 
-form .button input[type="submit"]:hover {
-  background-color: #9ed034;
-}
-
-/* partner-list Section */
-#partner-list {
-  list-style-type: none;
-  padding: 0;
+.captcha-container {
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  font-family: Arial, sans-serif;
 }
 
-.partner img {
-  width: 100px;
+.captcha-input {
+  width: 50%; /* Adjust percentage as needed */
+  min-width: 150px;
+  max-width: 250px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.captcha-box {
+  background: #ccc;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Cliffs */
+.cliffs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 50px;
+  overflow: hidden;
+}
+
+.cliff {
+  width: 48%;
+  margin: 1%;
+  float: left;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.cliff img {
+  width: 100%;
   height: auto;
+  display: block;
 }
 
-/* Footer */
-footer {
-  background-color: #4977d1;
+.caption {
+  background-color: #852b1b;
   color: #fff;
-  padding: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 10px;
   text-align: center;
 }
 
-footer .social h3 {
-  display: inline-block;
-  margin: 0 10px;
+.cliffs-container::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-/* Global Styles */
-/* Header Styles */
-/* Main Section Styles */
-/* Clock Styles */
-#clock {
+/* Home */
+#timeofday {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   color: #3a3a3a;
-  background: none(
+  text-align: center;
+  padding: 15px;
+  background: linear-gradient(
     0deg,
     rgba(251, 215, 139, 1) 0%,
     rgba(118, 213, 245, 1) 100%
   );
-  border-radius: 5px;
-  text-align: center;
-}
-
-#timeofday {
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(
-    0deg,
-    rgba(118, 213, 245, 1) 0%,
-    rgba(251, 215, 139, 1) 100%
-  );
-  padding: 20px; /* Add some spacing around the text */
-  border-radius: 10px; /* Rounded edges for a polished look */
-  text-align: center; /* Center the text content */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
-  color: #125688; /* Font color for the text */
 }
 
 #timeofday span {
-  font-size: 18px; /* Adjust font size for readability */
-}
-
-#clock {
-  font-weight: bold; /* Make the clock text stand out */
-}
-
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: #eef2f3;
-}
-
-header {
-  background-color: #4caf50;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-}
-
-main {
-  padding: 20px;
-  width: 80%;
-  margin: 0 auto;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  margin: 10px 0;
-  border-radius: 5px;
-}
-
-h1,
-h2 {
-  color: #333;
-}
-
-h1 {
-  text-align: center;
-  text-transform: uppercase;
-}
-
-p {
-  margin: 10px 0;
-}
-
-footer {
-  text-align: center;
-
-  padding: 10px 0;
-  background-color: #4caf50;
-  color: white;
+  color: #125688;
+  font-weight: bold;
 }

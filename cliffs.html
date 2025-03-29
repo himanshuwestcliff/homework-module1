@@ -1,54 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
-    <title>Cliffs Page</title>
+    <title>Great Cliffs of California</title>
     <link rel="stylesheet" href="styles.css" />
-    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    
   </head>
-
-  <body>
-    <!-- Header section -->
-    <header>
-      <h1>California's Greatest Cliffs</h1>
-    </header>
-
-    <!-- Main content section -->
-    <main>
-      <h2>About the Cliffs</h2>
-      <p>
-        The greatest cliffs are these four cliffs located in southern
-        California. Each of these cliffs have their own uniqueness and beauty:
-        West Cliff, North Cliff, East Cliff and South Cliff are the pride of
-        California. Each cliff has many amenities to offer visitors such as
-        recreational areas, camping sites, wildlife watch spots and overnight
-        cabins.
-      </p>
-      <h2>Famous Cliffs</h2>
-      <p>
-        No matter which direction you head from Irvine, California, the sites
-        are easily reached within a 100 mile radius. West Cliff is the most
-        popular among Westcliff University campus students because of its close
-        proximity.
-      </p>
-
-      <h2>Cliff's Gallery</h2>
-      <img src="images/cliff-north-mountain.jpg" alt="cliff-north-mountain" />
-      <img src="images/cliff-east-river.jpg" alt="cliff-east-river" />
-      <img src="images/cliff-south-canyon.jpg" alt="cliff-south-canyon" />
-      <img src="images/cliff-west-sea.jpg" alt="cliff-west-sea" />
-      <img src="images/forest_cliff.jpg" alt="forest_cliff" />
-    </main>
-
-    <!-- Footer section -->
-    <footer>
+  <body id="cliff">
+    <div id="container">
+      <header>
+        <div class="main-header">
+          <div class="logo">
+            <img src="images/logo.png" alt="Great Cliffs Logo" />
+          </div>
+          <nav class="main-menu">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li class="active"><a href="index.html">Cliffs</a></li>
+              <li><a href="activities.html">Activities</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <h2>California's Greatest Cliffs</h2>
+        <p>
+          The greatest cliffs are these four cliffs located in southern
+          California. Each of these cliffs have their own uniqueness and beauty:
+          West Cliff, North Cliff, East Cliff and South Cliff are the pride of
+          California. Each cliff has many amenities to offer visitors such as
+          recreational areas, camping sites, wildlife watch spots and overnight
+          cabins.
+        </p>
+        <p>
+          No matter which direction you head from Irvine, California, the sites
+          are easily reached within a 100 mile radius. West Cliff is the most
+          popular among Westcliff University campus students because of its
+          close proximity.
+        </p>
+        <div class="cliffs-container">
+          <div class="cliff">
+            <div class="caption">West Cliff</div>
+            <img src="images/cliff-west-sea.jpg" alt="West Cliff" />
+          </div>
+          <div class="cliff">
+            <div class="caption">North Cliff</div>
+            <img src="images/cliff-north-mountain.jpg" alt="North Cliff" />
+          </div>
+          <div class="cliff">
+            <div class="caption">East Cliff</div>
+            <img src="images/cliff-east-river.jpg" alt="East Cliff" />
+          </div>
+          <div class="cliff">
+            <div class="caption">South Cliff</div>
+            <img src="images/cliff-south-canyon.jpg" alt="South Cliff" />
+          </div>
+        </div>
+      </main>
+      <section>
+        <ul id="partner-list">
+          <li class="partner">
+            <img
+              src="images/partners/partner-bustour.png"
+              alt="Partner Bus Tours"
+            />
+          </li>
+          <li class="partner">
+            <img
+              src="images/partners/partner-cabinrental.png"
+              alt="Partner Cabin Rental"
+            />
+          </li>
+          <li class="partner">
+            <img
+              src="images/partners/partner-campingadv.png"
+              alt="Partner Camping Adventure"
+            />
+          </li>
+          <li class="partner">
+            <img
+              src="images/partners/partner-collegetours.png"
+              alt="Partner College Tours"
+            />
+          </li>
+          <li class="partner">
+            <img
+              src="images/partners/partner-rentalbike.png"
+              alt="Partner Bike Rentals"
+            />
+          </li>
+          <li class="partner">
+            <img
+              src="images/partners/partner-tourgroup.png"
+              alt="Partner Tour Group"
+            />
+          </li>
+        </ul>
+      </section>
+      <footer>
         <div id="nondisclaimer">
-          <div class="copy">&copy; Copyright 2025:: greatcliffs.com</div>
+          <div class="copy">&copy; Copyright 2020 :: GreatCliffs.com</div>
           <div class="social">
             <a href="#" class="fa fa-facebook"></a>
             <a href="#" class="fa fa-instagram"></a>
