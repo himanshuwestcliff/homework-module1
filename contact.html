@@ -63,10 +63,27 @@
               <input type="text" name="phone" placeholder="xxx-xxx-xxxx" />
             </div>
 
-            <div class="radios">
+            <div class="selectmenu">
               <label>How should we contact you?</label>
-              <input type="radio" name="contact" value="email" checked />Email
-              <input type="radio" name="contact" value="phone" />Phone
+              <select id="contactMethod">
+                <option value="select">Select One</option>
+                <option value="email">Email</option>
+                <option value="phone">Phone</option>
+              </select>
+              <div id="emailInput" style="display: none">
+                <input
+                  type="email"
+                  name="contactEmail"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div id="phoneInput" style="display: none">
+                <input
+                  type="text"
+                  name="contactPhone"
+                  placeholder="Enter your phone"
+                />
+              </div>
             </div>
 
             <div class="selectmenu">
