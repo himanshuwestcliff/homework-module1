@@ -1,12 +1,19 @@
 $(document).ready(function () {
-  // Add cursor pointer to selectable cells
-  $('td:not(:first-child):not(:contains("Not Available"))').css(
-    "cursor",
-    "pointer"
-  );
+  // Apply styles to selectable cells
+  $("td").each(function () {
+    let cellText = $(this).text().trim();
+    if (cellText !== "Not Available" && !$(this).closest("thead").length) {
+      $(this).css("cursor", "pointer");
+    }
+  });
 
-  // Handle cell click events
-  $('td:not(:first-child):not(:contains("Not Available"))').click(function () {
-    $(this).toggleClass("selected");
+  // Click event for table cells
+  $("td").click(function () {
+    let cellText = $(this).text().trim();
+
+    // Ignore "Not Available" and header cells
+    if (cellText !== "Not Available" && !$(this).closest("thead").length) {
+      $(this).toggleClass("selected");
+    }
   });
 });
