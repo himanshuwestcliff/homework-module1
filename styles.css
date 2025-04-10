@@ -252,14 +252,14 @@ input[type="submit"] {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
-  padding: 50px;
-  overflow: hidden;
+  padding: 50px 20px; /* Added side padding to prevent overflow */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  box-sizing: border-box; /* Ensures padding doesn't add extra width */
 }
 
 .cliff {
-  width: 48%;
-  margin: 1%;
-  float: left;
   background-color: #fff;
   overflow: hidden;
 }
@@ -280,10 +280,10 @@ input[type="submit"] {
   text-align: center;
 }
 
-.cliffs-container::after {
-  content: "";
-  display: table;
-  clear: both;
+@media (max-width: 439px) {
+  .cliffs-container {
+    grid-template-columns: 1fr; /* Ensures single column on very small screens */
+  }
 }
 
 /* Home */
@@ -360,7 +360,37 @@ input[type="submit"] {
 }
 
 /* Selected */
-.selected {
+.tdhighlight {
   background-color: #9dd033;
   color: white;
+}
+
+/* Activities */
+#activities main #displaySelected {
+  visibility: hidden;
+  margin: 0 auto;
+  width: 600px;
+  border: 2px solid #9ed034;
+  padding: 0.75em;
+}
+
+#activities main #displaySelected #result,
+#activities main #displaySelected #sendinfo {
+  display: inline-block;
+  margin: 0;
+}
+
+#activities main #result {
+  min-height: 50px;
+  width: 300px;
+  padding: 0;
+}
+
+#activities main #result h4 {
+  margin-bottom: 1em;
+  font-size: 1.15em;
+}
+
+#activities main #displaySelected #sendinfo input[type="email"] {
+  width: 200px;
 }
